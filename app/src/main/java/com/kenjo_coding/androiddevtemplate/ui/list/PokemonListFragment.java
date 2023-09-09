@@ -20,7 +20,7 @@ import com.kenjo_coding.androiddevtemplate.ui.detail.PokemonDetailFragment;
 import java.util.List;
 
 public class PokemonListFragment extends Fragment {
-    private String TAG = PokemonListFragment.class.getSimpleName();
+    private final String TAG = PokemonListFragment.class.getSimpleName();
     private FragmentPokemonListBinding binding;
     private PokemonViewModel viewModel;
     private PokemonListAdapter adapter;
@@ -35,11 +35,21 @@ public class PokemonListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // ViewModelインスタンスの生成
+        // viewModelインスタンスの生成
         viewModel = new ViewModelProvider(requireActivity()).get(PokemonViewModel.class);
 
+        // ポケモンデータを取得
+        binding.fetchPokemoData.setOnClickListener(v -> viewModel.fetchPokemons());
+
+        // ポケモンデータ取得状況を監視
+        viewModel.getPokemons().observe(getViewLifecycleOwner(), pokemons -> {
+            if(pokemons == null || pokemons.size() ==0) return;
+            setRecyclerView(pokemons);
+        });
     }
 
+
+    // recyclerViewにポケモンリストをセット
     private void setRecyclerView(List<Pokemon> pokemons) {
         adapter = new PokemonListAdapter();
         binding.recyclerView.setAdapter(adapter);
@@ -50,12 +60,11 @@ public class PokemonListFragment extends Fragment {
 
         // ListViewクリック時の動作（adapter経由でリスナー取得）
         adapter.setOnItemClickListener((v, pokemon) -> {
-            // 選択されたitem情報をViewModelに引き渡し
+            // 選択されたpokemon情報をViewModelに引き渡し
             viewModel.setPokemon(pokemon);
             navigate(new PokemonDetailFragment());
         });
     }
-
 
 
     private void navigate(Fragment fragment) {
