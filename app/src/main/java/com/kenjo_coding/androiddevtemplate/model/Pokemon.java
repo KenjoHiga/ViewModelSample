@@ -26,12 +26,12 @@ public class Pokemon {
     }
 
     public String getDefaultImageUrl() {
-        return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
-                String.valueOf(id) + ".png";
+        String BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
+        return  BASE_URL + String.valueOf(id) + ".png";
     }
 
     public String getOfficialImageUrl() {
-        return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" +
-                String.valueOf(id) + ".png";
+        String BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/";
+        return  BASE_URL + String.valueOf(id) + ".png";
     }
 }

@@ -97,6 +97,4 @@ public class PokemonViewModel extends ViewModel {
                 "  ]\n" +
                 "}";
     }
-
-
 }
