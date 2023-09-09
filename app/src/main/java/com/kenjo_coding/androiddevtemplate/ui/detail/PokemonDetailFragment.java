@@ -1,4 +1,4 @@
-package com.kenjo_coding.androiddevtemplate.ui.menu;
+package com.kenjo_coding.androiddevtemplate.ui.detail;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,18 +8,21 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.kenjo_coding.androiddevtemplate.R;
-import com.kenjo_coding.androiddevtemplate.databinding.FragmentMenuBinding;
+import com.kenjo_coding.androiddevtemplate.databinding.FragmentPokemonDetailBinding;
+import com.kenjo_coding.androiddevtemplate.ui.PokemonViewModel;
 import com.kenjo_coding.androiddevtemplate.ui.list.PokemonListFragment;
 
-public class MenuFragment extends Fragment {
-    private FragmentMenuBinding binding;
+public class PokemonDetailFragment extends Fragment {
+    private FragmentPokemonDetailBinding binding;
+    private PokemonViewModel viewModel;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // DataBinding用のインスタンスを生成
-        binding = FragmentMenuBinding.inflate(inflater, container, false);
+        binding = FragmentPokemonDetailBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -27,8 +30,13 @@ public class MenuFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // ボタン押下時にFragmentをに遷移
-        binding.navigatePokemonList.setOnClickListener(v -> navigate(new PokemonListFragment()));
+        // ViewModelインスタンスの生成
+        viewModel = new ViewModelProvider(requireActivity()).get(PokemonViewModel.class);
+        binding.setLifecycleOwner(getViewLifecycleOwner());
+
+
+        // 閉じるボタン押下（リストに戻る）
+        binding.close.setOnClickListener(v -> navigate(new PokemonListFragment()));
     }
 
     private void navigate(Fragment fragment) {
@@ -41,6 +49,5 @@ public class MenuFragment extends Fragment {
                     .commit();
         }
     }
-
 
 }
