@@ -1,25 +1,15 @@
 package com.kenjo_coding.androiddevtemplate.model;
 
 public class Pokemon {
-    private int id;
-    private String name;
-    private double height;
-    private double weight;
-    private String type;
+    public Integer id;
+    public String name;
+    public Integer height;
+    public Integer weight;
+    public String imageUrlDefault;
+    public String imageUrlOfficial;
 
-    private int imageResourceId;
-
-    public Pokemon(int id, String name, double height, double weight, String type, int imageResourceId) {
-        this.id = id;
-        this.name = name;
-        this.height = height;
-        this.weight = weight;
-        this.type = type;
-        this.imageResourceId = imageResourceId;
-    }
-
-
-    public int getId() {
+    /** getter */
+    public Integer getId() {
         return id;
     }
 
@@ -27,19 +17,19 @@ public class Pokemon {
         return name;
     }
 
-    public double getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
-    public double getWeight() {
+    public Integer getWeight() {
         return weight;
     }
 
-    public String getType() {
-        return type;
+    public String getImageUrlDefault() {
+        return imageUrlDefault;
     }
 
-    public int getImageResourceId() {
-        return imageResourceId;
+    public String getImageUrlOfficial() {
+        return imageUrlOfficial;
     }
 }
