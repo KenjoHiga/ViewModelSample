@@ -62,41 +62,36 @@ public class PokemonViewModel extends ViewModel {
                 "    {\n" +
                 "      \"height\": 7,\n" +
                 "      \"id\": 1,\n" +
-                "      \"imageUrlDefault\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\",\n" +
-                "      \"imageUrlOfficial\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png\",\n" +
-                "      \"name\": \"bulbasaur\",\n" +
+                "      \"name\": \"フシギダネ\",\n" +
+                "      \"type\": \"くさ\",\n" +
                 "      \"weight\": 69\n" +
                 "    },\n" +
                 "    {\n" +
                 "      \"height\": 10,\n" +
                 "      \"id\": 2,\n" +
-                "      \"imageUrlDefault\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png\",\n" +
-                "      \"imageUrlOfficial\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png\",\n" +
-                "      \"name\": \"ivysaur\",\n" +
+                "      \"name\": \"フシギソウ\",\n" +
+                "      \"type\": \"くさ\",\n" +
                 "      \"weight\": 130\n" +
                 "    },\n" +
                 "    {\n" +
                 "      \"height\": 20,\n" +
                 "      \"id\": 3,\n" +
-                "      \"imageUrlDefault\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png\",\n" +
-                "      \"imageUrlOfficial\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png\",\n" +
-                "      \"name\": \"venusaur\",\n" +
+                "      \"name\": \"フシギバナ\",\n" +
+                "      \"type\": \"くさ\",\n" +
                 "      \"weight\": 1000\n" +
                 "    },\n" +
                 "    {\n" +
                 "      \"height\": 6,\n" +
                 "      \"id\": 4,\n" +
-                "      \"imageUrlDefault\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png\",\n" +
-                "      \"imageUrlOfficial\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png\",\n" +
-                "      \"name\": \"charmander\",\n" +
+                "      \"name\": \"ヒトカゲ\",\n" +
+                "      \"type\": \"ほのお\",\n" +
                 "      \"weight\": 85\n" +
                 "    },\n" +
                 "    {\n" +
                 "      \"height\": 11,\n" +
                 "      \"id\": 5,\n" +
-                "      \"imageUrlDefault\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png\",\n" +
-                "      \"imageUrlOfficial\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png\",\n" +
-                "      \"name\": \"charmeleon\",\n" +
+                "      \"name\": \"リザード\",\n" +
+                "      \"type\": \"ほのお\",\n" +
                 "      \"weight\": 190\n" +
                 "    }\n" +
                 "  ]\n" +
