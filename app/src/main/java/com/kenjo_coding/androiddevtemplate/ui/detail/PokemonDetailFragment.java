@@ -29,11 +29,11 @@ public class PokemonDetailFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         // ViewModelインスタンスの生成
         viewModel = new ViewModelProvider(requireActivity()).get(PokemonViewModel.class);
-        binding.setLifecycleOwner(getViewLifecycleOwner());
 
+        // 前画面で選択済のポケモン情報をセット（DataBinding）
+        binding.setPokemon(viewModel.getTargetPokemon());
 
         // 閉じるボタン押下（リストに戻る）
         binding.close.setOnClickListener(v -> navigate(new PokemonListFragment()));
@@ -49,5 +49,4 @@ public class PokemonDetailFragment extends Fragment {
                     .commit();
         }
     }
-
 }

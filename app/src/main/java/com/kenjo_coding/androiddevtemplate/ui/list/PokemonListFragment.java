@@ -35,7 +35,7 @@ public class PokemonListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // viewModelインスタンスの生成
+        // ViewModelインスタンスの生成
         viewModel = new ViewModelProvider(requireActivity()).get(PokemonViewModel.class);
 
         // ポケモンデータを取得

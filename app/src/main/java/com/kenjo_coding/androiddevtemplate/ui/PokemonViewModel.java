@@ -29,9 +29,20 @@ public class PokemonViewModel extends ViewModel {
 
 
     /** 選択したポケモンの処理 */
+
+    // 定義
+    private Pokemon targetPokemon;
+
+    // セット
     public void setPokemon(Pokemon pokemon){
-        // TODO
+        this.targetPokemon = pokemon;
     }
+
+    // 参照
+    public Pokemon getTargetPokemon(){
+        return targetPokemon;
+    }
+
 
 
 
