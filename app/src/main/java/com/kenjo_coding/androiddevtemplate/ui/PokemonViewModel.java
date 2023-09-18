@@ -19,7 +19,7 @@ public class PokemonViewModel extends ViewModel {
     private MutableLiveData<List<Pokemon>> _pokemons = new MutableLiveData<>();
 
     // セット
-    public void fetchPokemons() {
+    public void onFetchPokemonsClicked() {
         _pokemons.setValue(generatePokemons());
     }
 

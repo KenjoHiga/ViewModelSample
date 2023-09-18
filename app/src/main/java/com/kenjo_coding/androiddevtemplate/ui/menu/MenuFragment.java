@@ -18,6 +18,7 @@ public class MenuFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         // DataBinding用のインスタンスを生成
         binding = FragmentMenuBinding.inflate(inflater, container, false);
         return binding.getRoot();

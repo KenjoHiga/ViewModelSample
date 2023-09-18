@@ -35,11 +35,12 @@ public class PokemonListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         // ViewModelインスタンスの生成
         viewModel = new ViewModelProvider(requireActivity()).get(PokemonViewModel.class);
 
         // ポケモンデータを取得
-        binding.fetchPokemoData.setOnClickListener(v -> viewModel.fetchPokemons());
+        binding.fetchPokemonData.setOnClickListener(v -> viewModel.onFetchPokemonsClicked());
 
         // ポケモンデータ取得状況を監視
         viewModel.getPokemons().observe(getViewLifecycleOwner(), pokemons -> {
