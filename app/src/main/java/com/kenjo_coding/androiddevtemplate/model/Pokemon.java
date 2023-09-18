@@ -7,6 +7,13 @@ public class Pokemon {
     public Integer height;
     public Integer weight;
 
+    static String execute(int i){
+        if(i % 3 == 0){
+            return "Fizz";
+        }
+        return String.valueOf(i);
+    }
+
 
     /** getter */
     public Integer getId() {
