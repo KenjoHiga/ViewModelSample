@@ -23,12 +23,14 @@ android {
             versionNameSuffix "_debug"  //←追加
 
             resValue "string", "app_name", "dev_${app_name}"
+            manifestPlaceholders = [ic_launcher: "@mipmap/ic_launcher_debug"]
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
             resValue "string", "app_name", "${app_name}"
+            manifestPlaceholders = [ic_launcher: "@mipmap/ic_launcher"]
         }
     }
     compileOptions {
